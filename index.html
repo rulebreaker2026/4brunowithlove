@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1C0F14">
+<title>Uma mensagem para você</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=Outfit:wght@400;500;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="root" class="root">
+
+  <!-- 01 Abertura -->
+  <section id="s-opening" class="screen opening" data-screen="0">
+    <div class="opening-head">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12.2 20.2C6.4 16.3 2.6 12.4 2.9 8.3 3.2 5 6.8 3.4 9.4 5.2c1.2.8 2.1 2 2.6 3.1.6-1.4 1.6-2.6 3-3.3 2.8-1.4 6.1.4 6.1 3.7 0 4.1-3.9 7.8-9.5 11.8" fill="none" stroke="#E08AA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Com amor, Ana Caroline</span>
+    </div>
+    <div class="opening-body">
+      <div id="envelope" class="envelope">
+        <svg viewBox="0 0 320 220" width="100%" height="100%" aria-hidden="true" style="display:block; overflow:visible">
+          <rect x="0" y="0" width="320" height="220" rx="10" fill="#D9C2B9"></rect>
+          <path id="flapO" d="M0 0 L160 -112 L320 0 Z" fill="#D1B8AE" style="transform-box:fill-box; transform-origin:50% 100%; transform:scaleY(0)"></path>
+          <g id="letter">
+            <rect x="24" y="14" width="272" height="190" rx="4" fill="#FBF5F2"></rect>
+            <path d="M160 64c-7-5-11-9.5-10.6-14.2.4-3.8 4.6-5.6 7.6-3.5 1.4.9 2.4 2.3 3 3.6.7-1.6 1.9-3 3.5-3.8 3.2-1.6 7 .5 7 4.3 0 4.7-4.5 9-11 13.6" fill="none" stroke="#E08AA0" stroke-width="1.6" stroke-linecap="round"></path>
+          </g>
+          <path d="M0 0 L150 124 L0 220 Z" fill="#E6D3CB"></path>
+          <path d="M320 0 L170 124 L320 220 Z" fill="#E6D3CB"></path>
+          <path d="M0 220 L160 118 L320 220 Z" fill="#EFE1DA"></path>
+          <path id="flapC" d="M0 0 L160 132 L320 0 Z" fill="#F4E9E4" style="transform-box:fill-box; transform-origin:50% 0%"></path>
+        </svg>
+        <button id="seal" class="seal" type="button" aria-label="Abrir">
+          <span id="seal-inner" class="seal-inner">
+            <svg viewBox="0 0 80 80" width="84" height="84" style="display:block; overflow:visible" aria-hidden="true">
+              <defs>
+                <radialGradient id="sealG" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#EDA9BA"></stop><stop offset=".6" stop-color="#D2768E"></stop><stop offset="1" stop-color="#A9506A"></stop></radialGradient>
+                <clipPath id="sealClipL"><rect x="-10" y="-10" width="50" height="100"></rect></clipPath>
+                <clipPath id="sealClipR"><rect x="40" y="-10" width="50" height="100"></rect></clipPath>
+                <g id="sealArt">
+                  <path d="M40 4c5 0 7 3 11 4s8-1 11 3 1 7 3 11 6 6 6 11-3 7-4 11 1 8-3 11-7 1-11 3-6 6-11 6-7-3-11-4-8 1-11-3-1-7-3-11-6-6-6-11 3-7 4-11-1-8 3-11 7-1 11-3S35 4 40 4z" fill="url(#sealG)"></path>
+                  <circle cx="40" cy="40" r="23" fill="none" stroke="#A44C65" stroke-width="1.5" opacity=".55"></circle>
+                  <path d="M40 52C29 44.5 27 37 31.5 33.5c3-2.3 6.8-.8 8.5 2.2 1.7-3 5.5-4.5 8.5-2.2C53 37 51 44.5 40 52z" fill="#B65A73"></path>
+                </g>
+              </defs>
+              <g id="sealL" clip-path="url(#sealClipL)" style="transform-box:fill-box; transform-origin:100% 50%"><use href="#sealArt"></use></g>
+              <g id="sealR" clip-path="url(#sealClipR)" style="transform-box:fill-box; transform-origin:0% 50%"><use href="#sealArt"></use></g>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div id="open-text" class="open-text" hidden>
+        <h1 class="open-title">Pois é, Bruno Guilherme… apesar dos apesares, você sabe que eu não conseguiria deixar esse dia passar em branco.</h1>
+        <button id="open-cont" class="btn btn-primary" type="button">Continuar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Frases -->
+  <section id="s-cards" class="screen cards" data-screen="1" hidden>
+    <div class="cards-left">
+      <div class="progress-wrap">
+        <div id="progress" class="progress" role="img" aria-label="1 de 4">
+          <div class="progress-line"></div>
+          <div class="progress-ticks">
+            <span class="tick" data-tick="1"></span>
+            <span class="tick" data-tick="2"></span>
+            <span class="tick" data-tick="3"></span>
+            <span class="tick" data-tick="4"></span>
+          </div>
+        </div>
+      </div>
+      <div class="cards-stack">
+        <p id="ghost" class="ghost" aria-hidden="true"></p>
+        <div class="cake cake-cards" data-cake="cards"></div>
+      </div>
+    </div>
+    <div class="cards-right">
+      <div class="card-wrap">
+        <div id="card" class="card">
+          <div id="under" class="under">
+            <svg class="under-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.2 20.2C6.4 16.3 2.6 12.4 2.9 8.3 3.2 5 6.8 3.4 9.4 5.2c1.2.8 2.1 2 2.6 3.1.6-1.4 1.6-2.6 3-3.3 2.8-1.4 6.1.4 6.1 3.7 0 4.1-3.9 7.8-9.5 11.8" fill="none" stroke="#C9667F" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p id="under-phrase" class="under-phrase" aria-hidden="true"></p>
+          </div>
+          <button id="coat" class="coat" type="button" data-scratch aria-label="Raspe aqui">
+            <canvas id="scratch"></canvas>
+          </button>
+        </div>
+        <div id="flakes" class="flakes" aria-hidden="true"></div>
+      </div>
+      <div class="actions">
+        <button id="reveal-now" class="btn btn-ghost" type="button">Revelar de uma vez</button>
+        <button id="next" class="btn btn-primary" type="button" hidden>Continuar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Transição -->
+  <section id="s-transition" class="screen transition" data-screen="2" hidden>
+    <svg id="heart" class="beat-heart" viewBox="0 0 24 24" width="88" height="88" aria-hidden="true"><path d="M12 21C5.5 16.6 1.8 12.6 2.2 8.2 2.6 4.6 6.6 2.9 9.4 4.9c1.2.9 2 2 2.6 3.1.6-1.1 1.4-2.2 2.6-3.1 2.8-2 6.8-.3 7.2 3.3.4 4.4-3.3 8.4-9.8 12.8z" fill="#E08AA0"/></svg>
+    <div class="cake cake-transition" data-cake="transition"></div>
+  </section>
+
+  <!-- 04 Surpresa -->
+  <section id="s-surprise" class="screen surprise" data-screen="3" hidden>
+  <div data-balloon="" aria-hidden="true" style="position:absolute; left:3%; top:7%; width:84px; aspect-ratio:60/100"><svg viewBox="0 0 60 100" width="100%" height="100%" style="display:block; overflow:visible"><path d="M30 64Q24 76 30 86T28 104" stroke="#B8A595" stroke-width="1.2" fill="none"></path><ellipse cx="30" cy="31" rx="26" ry="30" fill="#FF6B5B"></ellipse><ellipse cx="21" cy="19" rx="6" ry="10" fill="#FFFFFF" opacity=".45" transform="rotate(-20 21 19)"></ellipse><path d="M26 61L34 61 30 66Z" fill="#FF6B5B"></path></svg></div>
+  <div data-balloon="" aria-hidden="true" style="position:absolute; left:9%; top:58%; width:62px; aspect-ratio:60/100"><svg viewBox="0 0 60 100" width="100%" height="100%" style="display:block; overflow:visible"><path d="M30 64Q24 76 30 86T28 104" stroke="#B8A595" stroke-width="1.2" fill="none"></path><ellipse cx="30" cy="31" rx="26" ry="30" fill="#1FB5AC"></ellipse><ellipse cx="21" cy="19" rx="6" ry="10" fill="#FFFFFF" opacity=".45" transform="rotate(-20 21 19)"></ellipse><path d="M26 61L34 61 30 66Z" fill="#1FB5AC"></path></svg></div>
+  <div data-balloon="" aria-hidden="true" style="position:absolute; right:4%; top:5%; width:96px; aspect-ratio:60/100"><svg viewBox="0 0 60 100" width="100%" height="100%" style="display:block; overflow:visible"><path d="M30 64Q24 76 30 86T28 104" stroke="#B8A595" stroke-width="1.2" fill="none"></path><ellipse cx="30" cy="31" rx="26" ry="30" fill="#FFC93C"></ellipse><ellipse cx="21" cy="19" rx="6" ry="10" fill="#FFFFFF" opacity=".5" transform="rotate(-20 21 19)"></ellipse><path d="M26 61L34 61 30 66Z" fill="#FFC93C"></path></svg></div>
+  <div data-balloon="" aria-hidden="true" style="position:absolute; right:11%; top:62%; width:70px; aspect-ratio:60/100"><svg viewBox="0 0 60 100" width="100%" height="100%" style="display:block; overflow:visible"><path d="M30 64Q24 76 30 86T28 104" stroke="#B8A595" stroke-width="1.2" fill="none"></path><ellipse cx="30" cy="31" rx="26" ry="30" fill="#FF6FA8"></ellipse><ellipse cx="21" cy="19" rx="6" ry="10" fill="#FFFFFF" opacity=".45" transform="rotate(-20 21 19)"></ellipse><path d="M26 61L34 61 30 66Z" fill="#FF6FA8"></path></svg></div>
+  <div data-balloon="" aria-hidden="true" style="position:absolute; left:42%; top:2%; width:52px; aspect-ratio:60/100"><svg viewBox="0 0 60 100" width="100%" height="100%" style="display:block; overflow:visible"><path d="M30 64Q24 76 30 86T28 104" stroke="#B8A595" stroke-width="1.2" fill="none"></path><ellipse cx="30" cy="31" rx="26" ry="30" fill="#4E7CFF"></ellipse><ellipse cx="21" cy="19" rx="6" ry="10" fill="#FFFFFF" opacity=".45" transform="rotate(-20 21 19)"></ellipse><path d="M26 61L34 61 30 66Z" fill="#4E7CFF"></path></svg></div>
+    <div class="surprise-stage">
+      <div id="clown" class="clown" aria-hidden="true">
+      <svg viewBox="0 -70 400 640" width="100%" height="100%" style="display:block; overflow:visible">
+        <defs>
+          <radialGradient id="cSkin" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFEBDC"></stop><stop offset="1" stop-color="#F1B08F"></stop></radialGradient>
+          <radialGradient id="cCoral" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFA28D"></stop><stop offset="1" stop-color="#E0503B"></stop></radialGradient>
+          <radialGradient id="cTurq" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#7FE6DB"></stop><stop offset="1" stop-color="#13958D"></stop></radialGradient>
+          <radialGradient id="cYel" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFEA94"></stop><stop offset="1" stop-color="#EFA91D"></stop></radialGradient>
+          <radialGradient id="cPink" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFC6DA"></stop><stop offset="1" stop-color="#EC5A92"></stop></radialGradient>
+          <radialGradient id="cCream" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFFCF3"></stop><stop offset="1" stop-color="#E8CFAE"></stop></radialGradient>
+          <radialGradient id="cWhite" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFFFFF"></stop><stop offset="1" stop-color="#D9DAE4"></stop></radialGradient>
+          <radialGradient id="cRed" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FF8172"></stop><stop offset="1" stop-color="#C01D18"></stop></radialGradient>
+        </defs>
+        <ellipse cx="200" cy="552" rx="160" ry="14" fill="#EAD3B2" opacity=".8"></ellipse>
+        <circle id="ballB" cx="0" cy="0" r="19" fill="url(#cRed)" opacity="0"></circle>
+        <rect x="164" y="456" width="28" height="66" rx="14" fill="url(#cTurq)"></rect>
+        <rect x="208" y="456" width="28" height="66" rx="14" fill="url(#cTurq)"></rect>
+        <ellipse cx="144" cy="530" rx="74" ry="30" fill="url(#cCoral)"></ellipse>
+        <ellipse cx="256" cy="530" rx="74" ry="30" fill="url(#cCoral)"></ellipse>
+        <ellipse cx="120" cy="517" rx="22" ry="7" fill="#FFFFFF" opacity=".35"></ellipse>
+        <ellipse cx="232" cy="517" rx="22" ry="7" fill="#FFFFFF" opacity=".35"></ellipse>
+        <g id="upper" style="transform-box:view-box; transform-origin:200px 500px">
+          <path d="M124 345Q98 378 92 412" stroke="#F6C440" stroke-width="30" stroke-linecap="round" fill="none"></path>
+          <circle cx="90" cy="420" r="24" fill="url(#cWhite)"></circle>
+          <ellipse cx="200" cy="405" rx="96" ry="90" fill="url(#cTurq)"></ellipse>
+          <ellipse cx="160" cy="350" rx="30" ry="16" fill="#FFFFFF" opacity=".22"></ellipse>
+          <circle cx="150" cy="392" r="9" fill="#FFD54F"></circle>
+          <circle cx="246" cy="440" r="8" fill="#FFD54F"></circle>
+          <circle cx="168" cy="458" r="7" fill="#FFD54F"></circle>
+          <circle cx="254" cy="376" r="7" fill="#FFD54F"></circle>
+          <circle cx="200" cy="378" r="12" fill="url(#cPink)"></circle>
+          <circle cx="200" cy="424" r="12" fill="url(#cPink)"></circle>
+          <circle cx="114" cy="312" r="24" fill="url(#cCream)"></circle>
+          <circle cx="142" cy="320" r="24" fill="url(#cCream)"></circle>
+          <circle cx="171" cy="324" r="24" fill="url(#cCream)"></circle>
+          <circle cx="200" cy="326" r="24" fill="url(#cCream)"></circle>
+          <circle cx="229" cy="324" r="24" fill="url(#cCream)"></circle>
+          <circle cx="258" cy="320" r="24" fill="url(#cCream)"></circle>
+          <circle cx="286" cy="312" r="24" fill="url(#cCream)"></circle>
+          <g id="head">
+            <circle cx="110" cy="132" r="24" fill="url(#cCoral)"></circle>
+            <circle cx="92" cy="168" r="28" fill="url(#cCoral)"></circle>
+            <circle cx="98" cy="210" r="32" fill="url(#cCoral)"></circle>
+            <circle cx="290" cy="132" r="24" fill="url(#cCoral)"></circle>
+            <circle cx="308" cy="168" r="28" fill="url(#cCoral)"></circle>
+            <circle cx="302" cy="210" r="32" fill="url(#cCoral)"></circle>
+            <circle cx="200" cy="195" r="105" fill="url(#cSkin)"></circle>
+            <ellipse cx="158" cy="128" rx="28" ry="14" fill="#FFFFFF" opacity=".35" transform="rotate(-20 158 128)"></ellipse>
+            <path d="M138 112Q200 88 264 112L212 -28Z" fill="url(#cYel)"></path>
+            <path d="M162 66Q205 54 247 68" stroke="#F06C9F" stroke-width="9" fill="none" stroke-linecap="round"></path>
+            <path d="M185 24Q208 16 231 26" stroke="#F06C9F" stroke-width="8" fill="none" stroke-linecap="round"></path>
+            <circle cx="212" cy="-34" r="20" fill="url(#cPink)"></circle>
+            <path d="M146 150Q164 139 182 149" stroke="#9A4433" stroke-width="5" fill="none" stroke-linecap="round"></path>
+            <path d="M218 149Q236 139 254 150" stroke="#9A4433" stroke-width="5" fill="none" stroke-linecap="round"></path>
+            <ellipse cx="164" cy="182" rx="19" ry="23" fill="#FFFFFF"></ellipse>
+            <ellipse cx="236" cy="182" rx="19" ry="23" fill="#FFFFFF"></ellipse>
+            <g id="pupilL"><circle cx="166" cy="186" r="10" fill="#2B1A1F"></circle><circle cx="169.5" cy="182" r="3.5" fill="#FFFFFF"></circle></g>
+            <g id="pupilR"><circle cx="238" cy="186" r="10" fill="#2B1A1F"></circle><circle cx="241.5" cy="182" r="3.5" fill="#FFFFFF"></circle></g>
+            <path d="M140 244C128 236 126 226 133 224 137 223 140 226 140 229 140 226 143 223 147 224 154 226 152 236 140 244Z" fill="#F47FA8"></path>
+            <path d="M260 244C248 236 246 226 253 224 257 223 260 226 260 229 260 226 263 223 267 224 274 226 272 236 260 244Z" fill="#F47FA8"></path>
+            <path d="M160 250Q200 294 240 250Q200 270 160 250Z" fill="#A3273A"></path>
+            <circle cx="200" cy="218" r="20" fill="url(#cCoral)"></circle>
+            <ellipse cx="193" cy="211" rx="6" ry="4" fill="#FFFFFF" opacity=".5"></ellipse>
+          </g>
+          <g id="arm">
+            <path d="M276 340L332 414" stroke="#F6C440" stroke-width="30" stroke-linecap="round" fill="none"></path>
+            <circle cx="332" cy="414" r="24" fill="url(#cWhite)"></circle>
+            <circle id="handBall" cx="340" cy="424" r="19" fill="url(#cRed)"></circle>
+            <ellipse cx="322" cy="430" rx="9" ry="13" fill="url(#cWhite)" transform="rotate(-30 322 430)"></ellipse>
+          </g>
+        </g>
+        <circle id="ballF" cx="0" cy="0" r="19" fill="url(#cRed)" opacity="0"></circle>
+      </svg>
+      </div>
+      <div id="poster" class="poster">
+        <div class="tape tape-l" data-tape data-r="-7"></div>
+        <div class="tape tape-r" data-tape data-r="6"></div>
+        <div class="poster-lines" role="status">
+          <p class="poster-line" data-line>Se tivesse tido mais consideração por mim no dia do meu aniversário eu teria escrito coisas legais!!</p>
+          <p class="poster-line" data-line>Mas eu disse que a minha resposta viria no dia do seu!</p>
+          <p class="poster-line poster-line-lg" data-line>Feliz aniversário aí.</p>
+          <p id="tchau" class="tchau">Tchau!!!</p>
+        </div>
+        <div class="poster-actions">
+          <button id="again" class="btn btn-dark" type="button" hidden>Ver de novo</button>
+        </div>
+      </div>
+    </div>
+    <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+  </section>
+
+  <div id="petals" class="petals" aria-hidden="true"></div>
+  <div id="grain" class="grain" aria-hidden="true"></div>
+  <button id="mute" class="mute" type="button" aria-pressed="false">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="ico-on" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="ico-off" d="M16 9.5l5 5M21 9.5l-5 5"/></svg>
+    <span id="mute-label">Silenciar</span>
+  </button>
+  <div id="live" class="sr-only" aria-live="polite"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
